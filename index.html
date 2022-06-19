@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>KakaoTalk Embed</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>Click the image below</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('8bdf28ece78dd702aa793f14b5cc0538');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'Testing',
+        description: 'This is a test to see how sending messages work',
+        imageUrl:
+          '',
+        link: {
+          mobileWebUrl: 'https://www.google.com/',
+          webUrl: 'https://www.google.com/',
+        },
+      },
+      social: {
+        likeCount: 0, //99999 is the maximum
+        commentCount: 0, //99999 is the maximum
+        sharedCount: 0, //99999 is the maximum
+      },
+      buttons: [
+        {
+          title: 'Click button!',
+          link: {
+            mobileWebUrl: 'https://www.google.com/',
+            webUrl: 'https://www.google.com/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- When clicking on the image/button, the address should be placed in Kakao Developers' Application> Platform> Web to be displayed successfully when clicked. -->
+  </body>
+</html>
